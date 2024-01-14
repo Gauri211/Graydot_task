@@ -1,0 +1,20 @@
+.dashboard {
+  font-family: 'Times New Roman', Times, serif;
+  /* flex-direction: row; */
+}
+
+/* .sidebar {
+  display: flex;
+  flex: 5%;
+  z-index: 2;
+} */
+
+/* @media(max-width: 780px) {
+  .dashboard {
+    flex-direction: column-reverse;
+  }
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+  }
+} */
