@@ -15,9 +15,9 @@ export default function Header() {
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">Welcome to ForumNexus.</h1>
+          <h1 className="extraBold font60">Discover the perfect openSource project for you !!</h1>
           <HeaderP className="font13 semiBold">
-          ForumNexus is at the forefront of reshaping HR management with its cutting-edge forum-based solutions. By introducing powerful forums into the HR landscape, we are ushering in a new era of efficiency and collaboration. Our platform streamlines communication between employees, managers, and HR teams, fostering a culture of open dialogue and problem-solving.
+          Find and explore a wide range of open-source software tailored to your interests. Start your journey today! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi assumenda corrupti eligendi quis aliquid eveniet pariatur dolore possimus iste consequuntur error libero quidem dicta, explicabo quod natus molestiae cum placeat.
           </HeaderP>
           <BtnWrapper>
             <FullButton title="Get Started"action={() => nav('/login')}  />
@@ -33,9 +33,9 @@ export default function Header() {
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>Connect, Collaborate, and Empower Your Workforce.</em>
+                <em>Connect, Collaborate, and Control Your Workspace.</em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
+              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>The Ultimate open source projects</p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>
