@@ -32,7 +32,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             smooth={true}
             offset={-60}
           >
-            Home
+            Homes
           </Link>
         </li>
         <li className="semiBold font15 pointer">
