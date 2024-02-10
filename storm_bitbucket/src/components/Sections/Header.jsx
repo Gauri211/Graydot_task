@@ -20,7 +20,7 @@ export default function Header() {
           Find and explore a wide range of open-source software tailored to your interests. Start your journey today! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi assumenda corrupti eligendi quis aliquid eveniet pariatur dolore possimus iste consequuntur error libero quidem dicta, explicabo quod natus molestiae cum placeat.
           </HeaderP>
           <BtnWrapper>
-            <FullButton title="Get Started"action={() => nav('/login')}  />
+            <FullButton title="Get Started"action={() => nav('/verify')}  />
           </BtnWrapper>
         </div>
       </LeftSide>

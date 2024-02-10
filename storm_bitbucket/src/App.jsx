@@ -13,6 +13,8 @@ import ContactEmpForm from "./screens/employeeFeedback/EmpForm";
 import { UserContext } from "./context/UserContext";
 import Blogs from "./screens/blogs/Blogs";
 import Events from "./screens/events/Events";
+import Verify from "./components/Sections/Verify.jsx";
+import Dashboard from "./components/Sections/Dashboard.jsx";
 
 export default function App() {
   return (
@@ -29,6 +31,7 @@ export default function App() {
         <UserContext>
         <Routes>
           <Route path='/login' element={<><Login /></>} />
+          <Route path='/verify' element={<><Verify /></>} />
         </Routes>
         <Routes>
           <Route path='/' element={<><Landing /></>} />
@@ -36,7 +39,7 @@ export default function App() {
         </Routes>
         <Routes>
           <Route path='/home' element={<><Home /></>} />
-          <Route path='/survey' element={<><SurveyForm /></>} />
+          <Route path='/issues/:email' element={<><Dashboard /></>} />
           <Route path='/blogs' element={<><Blogs /></>} />
           <Route path='/events' element={<><Events /></>} />
         </Routes>
