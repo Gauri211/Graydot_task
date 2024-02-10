@@ -1,9 +1,12 @@
 import React from 'react';
-import { Flex, Box, VStack, Heading, Text, Divider, Button } from '@chakra-ui/react';
+import { Flex, Box, VStack, Heading, Text, Divider, Button, Image } from '@chakra-ui/react';
 import IssueCards from '../Elements/IssueCards';
 import { useNavigate, useParams } from 'react-router-dom';
 import { response } from '../../data/response'; 
 import Profile from '../Profile';
+import SideBar from '../Elements/SideBar';
+import Nav from '../Elements/Nav';
+import welcome from '../../../assets/welcome.jpg'
 
 const ProfileSection = () => {
   const navigate = useNavigate();
@@ -22,36 +25,21 @@ const ProfileSection = () => {
         boxShadow="0px 0px 10px rgba(0, 0, 0, 0.1)"
       >
         {/* Sidebar Content */}
-        <VStack p="4" spacing="4">
-          <Heading size="md">HackNcheese</Heading>
-          <Divider/>
-          <Text>Link 1</Text>
-          <Text>Link 2</Text>
-          <Button onClick={() => navigate('/profile')}>Profile</Button>
-          {/* Add more sidebar links as needed */}
-        </VStack>
+        <SideBar name={response[0].username}/>
       </Box>
 
       {/* Content */}
       <Box ml="250px" p="4" flex="1" overflowY="auto">
         {/* Navbar */}
-        <Box
-          bg="blue.500"
-          h="60px"
-          position="fixed"
-          top="0"
-          left="250px"
-          right="0"
-          zIndex="10"
-        >
-          <Text color="white" textAlign="center" lineHeight="60px">
-            Fixed Navbar
-          </Text>
-        </Box>
+        {/* <Nav /> */}
 
+<Flex>
+  <Box p=' 2% 5%'>
+  <Heading size="lg" >Hello {response[0].username}!!</Heading>
+  </Box>
+</Flex>
         {/* Main Content */}
-        <VStack spacing="4" mt="60px">
-          <Heading size="lg">Welcome {response[0].username}</Heading>
+        <VStack spacing="4" mt="10px">
           {/* Add your dashboard content here */}
           <Box bg="gray.100" w="100%" p='2%'>
           <Profile/>

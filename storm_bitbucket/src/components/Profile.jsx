@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Box, Button, Flex, Heading } from '@chakra-ui/react';
+import CustomLoadingAnimation from './Elements/CustomLoadingAnimation';
 
 const Profile = () => {
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [displayCount, setDisplayCount] = useState(6);
-  const [displayCountCon, setDisplayCountCon] = useState(6);
+  const [displayCount, setDisplayCount] = useState(12);
+  const [displayCountCon, setDisplayCountCon] = useState(12);
 
 
   useEffect(() => {
@@ -39,7 +40,7 @@ const Profile = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <CustomLoadingAnimation />;
   }
 
   if (error) {
@@ -49,7 +50,6 @@ const Profile = () => {
   const arr = userData.repositories
   const arr1 = userData.contributions
 
-  console.log(arr1)
   const rep = Array.isArray(arr) ? arr : [];
   const rep1 = Array.isArray(arr1) ? arr1 : [];
 
@@ -72,24 +72,37 @@ const Profile = () => {
       <ul className="repo-list">
         {/* Map over the user data to display repositories */}
         {rep?.slice(0, displayCount).map((repo) => (
-          <li size={'md'} key={repo.id}>{repo.name}</li>
+          <a key={repo.id} href={repo.html_url}>
+          <li size={'md'}>{repo.name}</li>
+          </a>
         ))}
       </ul>
-
-      <Button bgColor={'black'} color={'white'} m='auto' onClick={handleViewMore}>View More</Button>
+      <Box align={'center'} mt='5%'>
+      <Button bgColor={'black'} color={'white'} _hover={{ bgColor: 'gray.700' }} m='auto' onClick={handleViewMore}>View More</Button>
+      </Box>
       </Box>
     </div>
     <div className="profile-container">
-      <Box m='2%'>
-      <h2>Contributions:</h2>
+      <Box m='10%'>
+      <Heading size={'md'} mb='3%'>Contributions:</Heading>
+
       <ul className="repo-list">
         {/* Map over the user data to display repositories */}
-        {rep1?.map((repo) => (
-          <Heading size={'md'} key={repo.id}>{repo.name}</Heading>
-        ))}
+        {rep1
+  ?.slice(0, displayCountCon)
+  .reverse()
+  .map((repo) => (
+    <a key={repo.id} href={repo.repo_url}>
+    <li size={'md'} >
+      {repo.repo_name}
+    </li>
+    </a>
+  ))}
       </ul>
 
-      <button className="view-more-btn" onClick={handleViewMoreCon}>View More</button>
+      <Box align={'center'} mt='5%'>
+      <Button bgColor={'black'} color={'white'} _hover={{ bgColor: 'gray.700' }} m='auto' onClick={handleViewMoreCon}>View More</Button>
+      </Box>
       </Box>
     </div>
     </Flex>

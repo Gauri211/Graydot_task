@@ -5,25 +5,42 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const Verify = () => {
-  const [email, setEmail] = useState('');
-  const [issues, setIssues] = useState(null);
+    const [email, setEmail] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const [response, setResponse] = useState([])
+    const navigate = useNavigate()
 
-  const handleInputChange = (event) => {
-    setEmail(event.target.value);
-  };
+    const handleInputChange = (event) => {
+      setEmail(event.target.value);
+    };
+  
+    const handleSubmit = async () => {
+      setIsLoading(true); // Show loading animation
+      try {
+        let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: 'https://spit-hackthn.vercel.app/get-user-data/deepgohil',
+            headers: { 
+              'accept': 'application/json'
+            }
+          };
+          
+          axios.request(config)
+          .then((res) => {
+            setResponse((res.data));
+            navigate(`/issues/${email}`)
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setIsLoading(false); // Hide loading animation in case of error
+      }
+    };
 
-  const navigate = useNavigate();
-
-  const url = 'www.something.com'
-  const handleSubmit = () => {
-        // axios.get(url)
-        // .then((response) => {
-        //    setIssues(response.data);
-        // });
-        navigate(`/issues/${email}`)
-  };
-
- console.log(issues)
+  
   return (
     <Box align="center" mt={['10px', '30px', '50px']}>
       <marquee width="100%" direction="left" height="100px">
@@ -52,9 +69,11 @@ const Verify = () => {
           Go
         </Button>
       </Flex>
-      <Box mt={['10px', '50px', '100px']}>
-        <CustomLoadingAnimation />
-      </Box>
+      {isLoading && (
+        <Box mt={['10px', '50px', '100px']}>
+          <CustomLoadingAnimation />
+        </Box>
+      )}
     </Box>
   );
 };

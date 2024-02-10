@@ -25,9 +25,7 @@ const IssueCards = () => {
       });
 
     const categories_issues = response?.category_issues;
-    console.log(categories_issues)
     // const fav_lan = response[0].favorite_language;
-    console.log(categories_issues)
     const bug = categories_issues?.bug;
     const documentation = categories_issues?.documentation;
     const duplicates = categories_issues?.duplicate;
@@ -45,81 +43,106 @@ const IssueCards = () => {
     <Heading m='1%'>Bug</Heading>
     <SimpleGrid columns={[1, null, 2]} spacing={10}>
         {bug?.map(issue => (
-        <Card key={issue.id}> {/* Assuming each issue has a unique id */}
-          <CardHeader>
-            <Heading m='1%' size='md'>{issue.title}</Heading> {/* Assuming each issue has a title */}
-          </CardHeader>
-          {/* <CardBody>
-          </CardBody> */}
-          <CardFooter justifyContent={'space-between'}>
-          <Text align={'center'}>Created at {issue.created_at}</Text> {/* Assuming each issue has a description */}
-            <a href={issue.repository_url}><Button>View here</Button></a>
-          </CardFooter>
-        </Card>
+        <div className="ag-courses_item" key={issue.id}>
+        <a href="#" className="ag-courses-item_link">
+          <div className="ag-courses-item_bg"></div>
+  
+          <div className="ag-courses-item_title">
+          {issue.title}
+          </div>
+  
+          <div className="ag-courses-item_date-box">
+          Created: 
+            <span className="ag-courses-item_date">
+              {issue.created_at}
+            </span>
+          </div>
+        </a>
+  </div>
       ))}
     </SimpleGrid>
     <Heading m='1%'>Good First Issue</Heading>
     <SimpleGrid columns={[1, null, 2]} spacing={10}>
         {good_first_issue?.map(issue => (
-        <Card key={issue.id}> {/* Assuming each issue has a unique id */}
-          <CardHeader>
-            <Heading m='1%' size='md'>{issue.title}</Heading> {/* Assuming each issue has a title */}
-          </CardHeader>
-          {/* <CardBody>
-          </CardBody> */}
-          <CardFooter justifyContent={'space-between'}>
-          <Text align={'center'}>Created at {issue.created_at}</Text> {/* Assuming each issue has a description */}
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
+        <div className="ag-courses_item" key={issue.id}>
+        <a href="#" className="ag-courses-item_link">
+          <div className="ag-courses-item_bg"></div>
+  
+          <div className="ag-courses-item_title">
+          {issue.title}
+          </div>
+  
+          <div className="ag-courses-item_date-box">
+          Created: 
+            <span className="ag-courses-item_date">
+            {issue.created_at}
+            </span>
+          </div>
+        </a>
+  </div>
       ))}
     </SimpleGrid>
     <Heading m='1%'>Documentation</Heading>
     <SimpleGrid columns={[1, null, 2]} spacing={10}>
         {documentation?.map(issue => (
-        <Card key={issue.id}> {/* Assuming each issue has a unique id */}
-          <CardHeader>
-            <Heading m='1%' size='md'>{issue.title}</Heading> {/* Assuming each issue has a title */}
-          </CardHeader>
-          {/* <CardBody>
-          </CardBody> */}
-          <CardFooter justifyContent={'space-between'}>
-          <Text align={'center'}>Created at {issue.created_at}</Text> {/* Assuming each issue has a description */}
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
+        <div className="ag-courses_item" key={issue.id}>
+        <a href="#" className="ag-courses-item_link">
+          <div className="ag-courses-item_bg"></div>
+  
+          <div className="ag-courses-item_title">
+          {issue.title}
+          </div>
+  
+          <div className="ag-courses-item_date-box">
+          Created: 
+            <span className="ag-courses-item_date">
+            {issue.created_at}
+            </span>
+          </div>
+        </a>
+  </div>
       ))}
     </SimpleGrid>
     <Heading m='1%'>Duplicate</Heading>
     <SimpleGrid columns={[1, null, 2]} spacing={10}>
         {duplicates?.map(issue => (
-        <Card key={issue.id}> {/* Assuming each issue has a unique id */}
-          <CardHeader>
-            <Heading m='1%' size='md'>{issue.title}</Heading> {/* Assuming each issue has a title */}
-          </CardHeader>
-          {/* <CardBody>
-          </CardBody> */}
-          <CardFooter justifyContent={'space-between'}>
-          <Text align={'center'}>Created at {issue.created_at}</Text> {/* Assuming each issue has a description */}
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
+        <div className="ag-courses_item" key={issue.id}>
+        <a href="#" className="ag-courses-item_link">
+          <div className="ag-courses-item_bg"></div>
+  
+          <div className="ag-courses-item_title">
+          {issue.title}
+          </div>
+  
+          <div className="ag-courses-item_date-box">
+          Created: 
+            <span className="ag-courses-item_date">
+            {issue.created_at}
+            </span>
+          </div>
+        </a>
+  </div>
       ))}
     </SimpleGrid>
     <Heading m='1%'>Enhancement</Heading>
     <SimpleGrid columns={[1, null, 2]} spacing={10}>
         {enhancement?.map(issue => (
-        <Card key={issue.id}> {/* Assuming each issue has a unique id */}
-          <CardHeader>
-            <Heading m='1%' size='md'>{issue.title}</Heading> {/* Assuming each issue has a title */}
-          </CardHeader>
-          {/* <CardBody>
-          </CardBody> */}
-          <CardFooter justifyContent={'space-between'}>
-          <Text align={'center'}>Created at {issue.created_at}</Text> {/* Assuming each issue has a description */}
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
+        <div className="ag-courses_item" key={issue.id}>
+          <a href="#" className="ag-courses-item_link">
+            <div className="ag-courses-item_bg"></div>
+    
+            <div className="ag-courses-item_title">
+            {issue.title}
+            </div>
+    
+            <div className="ag-courses-item_date-box">
+            Created: 
+              <span className="ag-courses-item_date">
+              {issue.created_at}
+              </span>
+            </div>
+          </a>
+    </div>
       ))}
     </SimpleGrid>
     </>
@@ -127,3 +150,4 @@ const IssueCards = () => {
 }
 
 export default IssueCards
+
