@@ -55,7 +55,20 @@ const Dashboard = () => {
         boxShadow="0px 0px 10px rgba(0, 0, 0, 0.1)"
       >
         {/* Sidebar Content */}
+<<<<<<< HEAD
         <SideBar name={response.username}/>
+=======
+        <VStack p="4" spacing="4">
+          <Heading size="md">HackNcheese</Heading>
+          <Divider/>
+          <Text>Link 1</Text>
+          <Text>Link 2</Text>
+          <Button onClick={() => navigate('/profile')}>Profile</Button>
+          <Button onClick={() => navigate('/forum')}>Community</Button>
+          <Button onClick={() => navigate('http://43.204.130.212/')}>Code Now</Button>
+          {/* Add more sidebar links as needed */}
+        </VStack>
+>>>>>>> 12793f0427a8115694028b0428e55c2b4b3c6692
       </Box>
 
       {/* Content */}

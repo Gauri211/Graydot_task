@@ -4,31 +4,32 @@ import { Box, Button, Flex, Heading } from '@chakra-ui/react';
 import CustomLoadingAnimation from './Elements/CustomLoadingAnimation';
 
 const Profile = () => {
+  // const navigate = useNavigate();
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [displayCount, setDisplayCount] = useState(12);
   const [displayCountCon, setDisplayCountCon] = useState(12);
 
-
   useEffect(() => {
     let data = JSON.stringify({
-      "username": "string",
-      "token": "string"
+      username: "string",
+      token: "string",
     });
 
     let config = {
-      method: 'post',
+      method: "post",
       maxBodyLength: Infinity,
-      url: 'https://spit-hackthn.vercel.app/fetch-user-data-fromdbs/',
+      url: "https://spit-hackthn.vercel.app/fetch-user-data-fromdbs/",
       headers: {
-        'accept': 'application/json',
-        'Content-Type': 'application/json'
+        accept: "application/json",
+        "Content-Type": "application/json",
       },
-      data: data
+      data: data,
     };
 
-    axios.request(config)
+    axios
+      .request(config)
       .then((response) => {
         setUserData(response.data);
         setLoading(false);
@@ -47,12 +48,11 @@ const Profile = () => {
     return <p>Error: {error.message}</p>;
   }
 
-  const arr = userData.repositories
-  const arr1 = userData.contributions
+  const arr = userData.repositories;
+  const arr1 = userData.contributions;
 
   const rep = Array.isArray(arr) ? arr : [];
   const rep1 = Array.isArray(arr1) ? arr1 : [];
-
 
   const handleViewMore = () => {
     // Increase the display count by 6

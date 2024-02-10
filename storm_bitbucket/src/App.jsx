@@ -17,6 +17,7 @@ import Verify from "./components/Sections/Verify.jsx";
 import Dashboard from "./components/Sections/Dashboard.jsx";
 import Profile from "./components/Profile.jsx";
 import ProfileSection from "./components/Sections/ProfileSection.jsx";
+import Forumpage from "./screens/forums/Forumpage.jsx";
 
 export default function App() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
           <Route path='/blogs' element={<><Blogs /></>} />
           <Route path='/events' element={<><Events /></>} />
           <Route path='/profile' element={<><ProfileSection /></>} />
+          <Route path='/forum' element={<><Forumpage /></>} />
         </Routes>
         <Routes>
           <Route path='/empForm' element={<><ContactEmpForm /></>} />
