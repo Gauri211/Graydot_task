@@ -16,6 +16,7 @@ import { UserContext } from "./context/UserContext";
 import Verify from "./components/Sections/Verify.jsx";
 import Dashboard from "./components/Sections/Dashboard.jsx";
 import Profile from "./components/Profile.jsx";
+import Forum_page from "./screens/forums/Forum_page.jsx";
 import ProfileSection from "./components/Sections/ProfileSection.jsx";
 // import Forumpage from "./screens/forums/Forumpage.jsx";
 import LeaderDash from "./components/Sections/LeaderDash.jsx";
