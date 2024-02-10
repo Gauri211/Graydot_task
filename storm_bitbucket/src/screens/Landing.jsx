@@ -16,28 +16,11 @@ export default function Landing() {
       <TopNavbar />
       <Header />
       <Services />
-      {/* <Projects /> */}
-      {/* <Blog /> */}
-      <VStack spacing={4} mb={8}>
-          <Heading as="h2" size="xl">
-            What Our Users Say
-          </Heading>
-          {/* Testimonial Cards */}
-          <TestimonialCard
-            name="John Doe"
-            position="Software Engineer"
-            comment="This platform transformed our work culture!"
-            imageSrc="https://example.com/john-doe-avatar.jpg"
-          />
-          <TestimonialCard
-            name="Jane Smith"
-            position="HR Manager"
-            comment="Easy to use and provides valuable insights."
-            imageSrc="https://example.com/jane-smith-avatar.jpg"
-          />
-          {/* Add more TestimonialCard components as needed */}
-        </VStack>
-      <Contact />
+      <Projects />
+      <Blog />
+      
+      {/* <Contact /> */}
+
       <Footer />
     </>
   );

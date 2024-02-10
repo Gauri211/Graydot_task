@@ -33,28 +33,28 @@ export default function Services() {
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="roller"
-                title="Employee Activity Monitoring"
-                subtitle="Allows managers and team leaders to understand workforce commitment and tailor strategies for better productivity"
+                title="ProjectHub"
+                subtitle="A centralized hub for discovering, collaborating on, and tracking contributions to open source projects."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="monitor"
-                title="Anonymized Peer Feedback System"
-                subtitle="Enables employees to share feedback with colleagues without revealing their identity."
+                title="CodeExplorer"
+                subtitle="An advanced code search and exploration tool that helps developers find projects, source code snippets, and specific functions efficiently."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="browser"
-                title="Company Blog & News Interface"
-                subtitle="Keeps employees informed about the latest developments, milestones, and achievements."
+                title="CollabConnect"
+                subtitle="A collaboration platform that integrates real-time communication tools like chat and video conferencing for seamless coordination among contributors."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox icon="printer" 
-              title="Event Showcase & Calendar" 
-              subtitle="Lists upcoming and past company events, giving employees a comprehensive view of organizational happenings." />
+              title="NotifyMe" 
+              subtitle="A notification service that keeps users updated on project activities, new issues, and collaboration opportunities tailored to their interests." />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div>
@@ -62,10 +62,10 @@ export default function Services() {
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
-                <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">Place where we Engage, Connect and Grow</h2>
+                <h4 className="font15 semiBold">A few words about us</h4>
+                <h2 className="font40 extraBold">Find the Perfect Open Source Software for You</h2>
                 <p className="font12">
-                Embracing creativity and expertise, we blend IDEAS and IDOLS seamlessly at our digital hub. As your one-stop solution, we transform concepts into captivating digital forms, defining excellence in every creation.
+                At our website, we make it simple and easy to find the best open-source software recommendations based on your interests. Whether you're a developer, designer, or just someone looking for new tools, we've got you covered. Our intuitive interface and powerful recommendation engine ensure that you'll discover the perfect software to meet your needs.
                 </p>
                 <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
                   <div style={{ width: "190px" }}>

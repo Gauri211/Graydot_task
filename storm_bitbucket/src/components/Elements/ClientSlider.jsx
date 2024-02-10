@@ -12,9 +12,9 @@ import ClientLogo06 from "../../assets/img/clients/logo06.svg";
 export default function ClientSlider() {
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 6,
-    autoPlay:true,
+    autoPlay: true,
     slidesToScroll: 2,
     arrows: false,
     responsive: [

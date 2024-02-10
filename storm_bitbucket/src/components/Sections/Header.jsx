@@ -3,31 +3,53 @@ import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import home from "../../assets/img/home.jpeg";
+import home from "../../assets/img/home.jpg";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 import { useNavigate } from "react-router-dom";
 import { Image } from "@chakra-ui/react";
+import Lottie from "react-lottie";
+import animationData from '../../assets/lottie/lot.json';
 
 export default function Header() {
-  const nav = useNavigate()
+  const nav = useNavigate();
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">Discover the perfect openSource project for you !!</h1>
+          <h1 className="extraBold font60">
+            Discover the perfect openSource project for you !!
+          </h1>
           <HeaderP className="font13 semiBold">
-          Find and explore a wide range of open-source software tailored to your interests. Start your journey today! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi assumenda corrupti eligendi quis aliquid eveniet pariatur dolore possimus iste consequuntur error libero quidem dicta, explicabo quod natus molestiae cum placeat.
+            Find and explore a wide range of open-source software tailored to
+            your interests. Start your journey today! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quasi assumenda corrupti eligendi quis
+            aliquid eveniet pariatur dolore possimus iste consequuntur error
+            libero quidem dicta, explicabo quod natus molestiae cum placeat.
           </HeaderP>
           <BtnWrapper>
-            <FullButton title="Get Started"action={() => nav('/login')}  />
+            <FullButton title="Get Started" action={() => nav("/login")} />
           </BtnWrapper>
         </div>
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Image className="radius8" src={home} alt="office" style={{zIndex: 9}} h='607px' w='426px'/>
-          <QuoteWrapper className="flexCenter darkBg radius8">
+          <Lottie
+            options={defaultOptions}
+            // height={607}
+            // width={426}
+            isStopped={false}
+            isPaused={false}
+          />
+          {/* <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
             </QuotesWrapper>
@@ -35,19 +57,23 @@ export default function Header() {
               <p className="font15 whiteColor">
                 <em>Connect, Collaborate, and Control Your Workspace.</em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>The Ultimate open source projects</p>
+              <p
+                className="font13 orangeColor textRight"
+                style={{ marginTop: "10px" }}
+              >
+                The Ultimate open source projects
+              </p>
             </div>
-          </QuoteWrapper>
-          <DotsWrapper>
+          </QuoteWrapper> */}
+          {/* <DotsWrapper>
             <Dots />
-          </DotsWrapper>
+          </DotsWrapper> */}
         </ImageWrapper>
-        <GreyDiv className="lightBg"></GreyDiv>
+        {/* <GreyDiv className="lightBg"></GreyDiv> */}
       </RightSide>
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.section`
   padding-top: 80px;
@@ -153,5 +179,3 @@ const DotsWrapper = styled.div`
     display: none;
   }
 `;
-
-
