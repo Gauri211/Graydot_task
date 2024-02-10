@@ -19,13 +19,7 @@ const Forum_page = () => {
     console.log(text)
   };
   const handleClick = () => {
-    const newCard = <Forum_Card key={mode.length} value={text} />;
-
-    // Update the mode state with the new card
-    setMode([...mode, newCard]);
-
-    // Clear the input text
-    setText("");
+    setMode(<Forum_Card value={text} />)
   };
 
   return (

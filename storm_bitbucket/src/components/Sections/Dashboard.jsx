@@ -55,49 +55,13 @@ const Dashboard = () => {
         boxShadow="0px 0px 10px rgba(0, 0, 0, 0.1)"
       >
         {/* Sidebar Content */}
-        <VStack p="4" spacing="4">
-          <Heading size="md">HackNcheese</Heading>
-          <Divider/>
-          <Text>Link 1</Text>
-          <Text>Link 2</Text>
-          <Button onClick={() => navigate('/profile')}>Profile</Button>
-          <Button onClick={() => navigate('/forum')}>Community</Button>
-          {/* Add more sidebar links as needed */}
-        </VStack>
+        <SideBar name={response.username}/>
       </Box>
 
       {/* Content */}
       <Box ml="250px" p="4" flex="1" overflowY="auto">
         {/* Navbar */}
-        <Box
-          bg="black"
-          h="60px"
-          position="fixed"
-          top="0"
-          left={isOpen || !isMobile ? "250px" : "0"}
-          right="0"
-          zIndex="10"
-        >
-          <Flex justifyContent="space-between" alignItems="center" p="0 4">
-            {isMobile && (
-              <IconButton
-                icon={<HamburgerIcon />}
-                variant="ghost"
-                onClick={isOpen ? onClose : onOpen}
-              />
-            )}
-            <Flex>
-            <Input
-                placeholder="Search"
-                width={['100%', '80%', '380px']}
-                bgColor={'white'}
-                m='2% 7%'
-            />
-            </Flex>
-            <Avatar mr={'1%'}/>
-            {/* Add other navbar elements here */}
-          </Flex>
-        </Box>
+        <Nav />
 
         {/* Main Content */}
         <VStack spacing="4" mt="60px">
@@ -113,4 +77,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-

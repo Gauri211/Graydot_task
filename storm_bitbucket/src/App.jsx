@@ -18,6 +18,7 @@ import Dashboard from "./components/Sections/Dashboard.jsx";
 import Profile from "./components/Profile.jsx";
 import Forum_page from "./screens/forums/Forum_page.jsx";
 import ProfileSection from "./components/Sections/ProfileSection.jsx";
+// import ForumDash from "./screens/forums/ForumDash.jsx";
 
 
 export default function App() {
