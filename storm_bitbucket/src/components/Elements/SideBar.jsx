@@ -11,6 +11,8 @@ const SideBar = (name) => {
           <Button onClick={() => navigate(`/issues/user`)}>Issues</Button>
           <Button onClick={() => navigate(`/saved`)}>Saved</Button>
           <Button onClick={() => navigate('/profile')}>Profile</Button>
+          <Button onClick={() => navigate('/leader')}>Leaderboard</Button>
+
           {/* Add more sidebar links as needed */}
     </VStack>
   )

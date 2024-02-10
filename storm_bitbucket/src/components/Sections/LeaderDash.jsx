@@ -4,8 +4,9 @@ import IssueCards from '../Elements/IssueCards';
 import axios from 'axios';
 import SideBar from '../Elements/SideBar';
 import Nav from '../Elements/Nav';
+import Leaderboard from './Leaderboard';
 
-const Dashboard = () => {
+const LeaderDash = () => {
 //   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const [response, setResponse] = useState([])
@@ -56,7 +57,7 @@ const Dashboard = () => {
         <Heading size="lg">Welcome {response.username}</Heading>
           {/* Add your dashboard content here */}
           <Box bg="gray.100" w="100%" p='2%'>
-            <IssueCards />
+            <Leaderboard />
           </Box>
         </VStack>
       </Box>
@@ -64,5 +65,5 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default LeaderDash;
 
