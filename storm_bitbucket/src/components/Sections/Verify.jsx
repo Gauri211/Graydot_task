@@ -31,27 +31,27 @@ const Verify = () => {
           👋🏽 Make sure to enter your correct email address you have to verify it
         </Text>
       </marquee>
-      <Flex direction={['column', 'column', 'row']} alignItems="center" justifyContent="center" mt={['20px', '50px', '100px']}>
-        <Input
-          placeholder="Enter your Username"
-          width={['100%', '80%', '380px']}
-          height="60px"
-          mb={['15px', '20px', '0']}
-          value={email}
-          onChange={handleInputChange}
-          onBlur={handleSubmit} // Trigger submit on blur (you can use a button click event instead)
-        />
-        <Button
-          bgColor="black"
-          height="60px"
-          width={['100%', '20%', '100px']}
-          color="white"
-          ml={['0', '0', '20px']}
-          _hover={{ bgColor: 'gray.700' }} // Change color on hover
-        >
-          Go
-        </Button>
-      </Flex>
+        <Flex direction={['column', 'column', 'row']} alignItems="center" justifyContent="center" mt={['20px', '50px', '100px']}>
+          <Input
+            placeholder="Enter your Username"
+            width={['100%', '80%', '380px']}
+            height="60px"
+            mb={['15px', '20px', '0']}
+            value={email}
+            onChange={handleInputChange}
+            onBlur={handleSubmit} // Trigger submit on blur (you can use a button click event instead)
+          />
+          <Button
+            bgColor="black"
+            height="60px"
+            width={['100%', '20%', '100px']}
+            color="white"
+            ml={['0', '0', '20px']}
+            _hover={{ bgColor: 'gray.700' }} // Change color on hover
+          >
+            Go
+          </Button>
+        </Flex>
       <Box mt={['10px', '50px', '100px']}>
         <CustomLoadingAnimation />
       </Box>
