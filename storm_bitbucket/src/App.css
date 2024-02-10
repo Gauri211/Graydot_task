@@ -41,3 +41,36 @@
 .buttons button:hover {
   background-color: #00c4ff;
 }
+
+.profile-container {
+  margin: auto;
+  padding: '10%';
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+
+.repo-list {
+  list-style: disc;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.repo-list li {
+  margin-bottom: 8px;
+}
+
+.view-more-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-more-btn:hover {
+  background-color: #45a049;
+}
+

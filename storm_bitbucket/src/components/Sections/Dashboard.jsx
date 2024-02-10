@@ -50,20 +50,20 @@ const Dashboard = () => {
         h="100vh"
         position="fixed"
         top="0"
-        left="0"
+        left="0" 
         overflowY="auto"
         boxShadow="0px 0px 10px rgba(0, 0, 0, 0.1)"
         transition="width 0.5s"
       >
         {/* Sidebar Content */}
         <VStack p="4" spacing="4">
-      <Heading size="md" textAlign="center">HackNcheese</Heading>
-      <Divider/>
-      <Link color="blue.400">Link 1</Link>
-      <Link color="blue.400">Saved</Link>
-      <Link color="blue.400">Profile</Link>
-      {/* Add more sidebar links as needed */}
-    </VStack>
+          <Heading size="md">HackNcheese</Heading>
+          <Divider/>
+          <Text>Link 1</Text>
+          <Text>Link 2</Text>
+          <Button onClick={() => navigate('/profile')}>Profile</Button>
+          {/* Add more sidebar links as needed */}
+        </VStack>
       </Box>
 
       {/* Content */}
