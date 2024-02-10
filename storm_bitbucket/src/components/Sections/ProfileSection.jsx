@@ -5,7 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { response } from '../../data/response'; 
 import Profile from '../Profile';
 
-const Dashboard = () => {
+const ProfileSection = () => {
   const navigate = useNavigate();
 
   return (
@@ -54,7 +54,7 @@ const Dashboard = () => {
           <Heading size="lg">Welcome {response[0].username}</Heading>
           {/* Add your dashboard content here */}
           <Box bg="gray.100" w="100%" p='2%'>
-          <IssueCards/>
+          <Profile/>
           </Box>
           {/* Adjust the height and content of the box as needed */}
         </VStack>
@@ -63,4 +63,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default ProfileSection;
