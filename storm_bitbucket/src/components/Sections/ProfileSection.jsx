@@ -28,6 +28,7 @@ const ProfileSection = () => {
           <Text>Link 1</Text>
           <Text>Link 2</Text>
           <Button onClick={() => navigate('/profile')}>Profile</Button>
+          <Button onClick={() => navigate('/forum')}>Community</Button>
           {/* Add more sidebar links as needed */}
         </VStack>
       </Box>

@@ -1,33 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Box, Button, Flex, Heading } from '@chakra-ui/react';
+import React, { useState, useEffect, useNavigate } from "react";
+import axios from "axios";
+import { Box, Button, Flex, Heading } from "@chakra-ui/react";
 
 const Profile = () => {
+  // const navigate = useNavigate();
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [displayCount, setDisplayCount] = useState(6);
   const [displayCountCon, setDisplayCountCon] = useState(6);
 
-
   useEffect(() => {
     let data = JSON.stringify({
-      "username": "string",
-      "token": "string"
+      username: "string",
+      token: "string",
     });
 
     let config = {
-      method: 'post',
+      method: "post",
       maxBodyLength: Infinity,
-      url: 'https://spit-hackthn.vercel.app/fetch-user-data-fromdbs/',
+      url: "https://spit-hackthn.vercel.app/fetch-user-data-fromdbs/",
       headers: {
-        'accept': 'application/json',
-        'Content-Type': 'application/json'
+        accept: "application/json",
+        "Content-Type": "application/json",
       },
-      data: data
+      data: data,
     };
 
-    axios.request(config)
+    axios
+      .request(config)
       .then((response) => {
         setUserData(response.data);
         setLoading(false);
@@ -46,13 +47,12 @@ const Profile = () => {
     return <p>Error: {error.message}</p>;
   }
 
-  const arr = userData.repositories
-  const arr1 = userData.contributions
+  const arr = userData.repositories;
+  const arr1 = userData.contributions;
 
-  console.log(arr1)
+  console.log(arr1);
   const rep = Array.isArray(arr) ? arr : [];
   const rep1 = Array.isArray(arr1) ? arr1 : [];
-
 
   const handleViewMore = () => {
     // Increase the display count by 6
@@ -66,32 +66,51 @@ const Profile = () => {
 
   return (
     <Flex>
-    <div className="profile-container">
-      <Box m='10%'>
-      <Heading size={'md'} mb='3%'>Repositories:</Heading>
-      <ul className="repo-list">
-        {/* Map over the user data to display repositories */}
-        {rep?.slice(0, displayCount).map((repo) => (
-          <li size={'md'} key={repo.id}>{repo.name}</li>
-        ))}
-      </ul>
+      <div className="profile-container">
+        <Box m="10%">
+          <Heading size={"md"} mb="3%">
+            Repositories:
+          </Heading>
+          <ul className="repo-list">
+            {/* Map over the user data to display repositories */}
+            {rep?.slice(0, displayCount).map((repo) => (
+              <li size={"md"} key={repo.id}>
+                {repo.name}
+              </li>
+            ))}
+          </ul>
 
-      <Button bgColor={'black'} color={'white'} m='auto' onClick={handleViewMore}>View More</Button>
-      </Box>
-    </div>
-    <div className="profile-container">
-      <Box m='2%'>
-      <h2>Contributions:</h2>
-      <ul className="repo-list">
-        {/* Map over the user data to display repositories */}
-        {rep1?.map((repo) => (
-          <Heading size={'md'} key={repo.id}>{repo.name}</Heading>
-        ))}
-      </ul>
+          <Button
+            bgColor={"black"}
+            color={"white"}
+            m="auto"
+            onClick={handleViewMore}
+          >
+            View More
+          </Button>
+        </Box>
+      </div>
+      <div className="profile-container">
+        <Box m="2%">
+          <h2>Contributions:</h2>
+          <ul className="repo-list">
+            {/* Map over the user data to display repositories */}
+            {rep1?.map((repo) => (
+              <Heading size={"md"} key={repo.id}>
+                {repo.name}
+              </Heading>
+            ))}
+          </ul>
 
-      <button className="view-more-btn" onClick={handleViewMoreCon}>View More</button>
-      </Box>
-    </div>
+          <button className="view-more-btn" onClick={handleViewMoreCon}>
+            View More
+          </button>
+        </Box>
+      </div>
+      <a href="http://43.204.130.212/">
+        <Button>Code Now</Button>
+      </a>
+      
     </Flex>
   );
 };

@@ -28,6 +28,8 @@ const Dashboard = () => {
           <Text>Link 1</Text>
           <Text>Link 2</Text>
           <Button onClick={() => navigate('/profile')}>Profile</Button>
+          <Button onClick={() => navigate('/forum')}>Community</Button>
+          <Button onClick={() => navigate('http://43.204.130.212/')}>Code Now</Button>
           {/* Add more sidebar links as needed */}
         </VStack>
       </Box>
