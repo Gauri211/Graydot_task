@@ -1,16 +1,10 @@
-import React from 'react';
-import { Flex, Box, VStack, Heading, Text, Divider, Button, Image } from '@chakra-ui/react';
-import IssueCards from '../Elements/IssueCards';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Flex, Box, VStack, Heading } from '@chakra-ui/react';
 import { response } from '../../data/response'; 
 import Profile from '../Profile';
 import SideBar from '../Elements/SideBar';
 import Nav from '../Elements/Nav';
-import welcome from '../../../assets/welcome.jpg'
 
 const ProfileSection = () => {
-  const navigate = useNavigate();
-
   return (
     <Flex>
       {/* Sidebar */}
@@ -31,9 +25,9 @@ const ProfileSection = () => {
       {/* Content */}
       <Box ml="250px" p="4" flex="1" overflowY="auto">
         {/* Navbar */}
-        {/* <Nav /> */}
+        <Nav />
 
-<Flex>
+<Flex mt='60px'>
   <Box p=' 2% 5%'>
   <Heading size="lg" >Hello {response[0].username}!!</Heading>
   </Box>

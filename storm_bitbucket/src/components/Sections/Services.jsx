@@ -14,7 +14,7 @@ export default function Services() {
   const nav = useNavigate()
   return (
     <Wrapper id="services">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
+      <div className="lightBg" style={{ padding: "50px 0 0 0" }}>
         <div className="container">
           <ClientSlider />
         </div>

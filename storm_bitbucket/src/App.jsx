@@ -15,11 +15,12 @@ import { UserContext } from "./context/UserContext";
 // import Events from "./screens/events/Events";
 import Verify from "./components/Sections/Verify.jsx";
 import Dashboard from "./components/Sections/Dashboard.jsx";
-import Profile from "./components/Profile.jsx";
-import Forum_page from "./screens/forums/Forum_page.jsx";
 import ProfileSection from "./components/Sections/ProfileSection.jsx";
 import LeaderDash from "./components/Sections/LeaderDash.jsx";
 import ForumDash from "./components/Sections/ForumDash.jsx";
+import AiDash from "./components/Sections/AiDash.jsx";
+import RepoDash from "./components/Sections/RepoDash.jsx";
+import Chat from "./chat/Chat.jsx"
 
 export default function App() {
   return (
@@ -49,6 +50,12 @@ export default function App() {
           <Route path='/profile' element={<><ProfileSection /></>} />
           <Route path='/forum' element={<><ForumDash /></>} />
           <Route path='/leader' element={<><LeaderDash /></>} />
+          <Route path='/ai' element={<><AiDash /></>} />
+          <Route path='/repo' element={<><RepoDash /></>} />
+
+          <Route path='/chat' element={<><Chat /></>} />
+
+
 
         </Routes>
         {/* <Routes>

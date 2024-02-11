@@ -1,5 +1,4 @@
-import React from 'react'
-import { Flex, Box, VStack, Heading, Text, Divider, IconButton, useDisclosure, Input, Avatar, Button } from '@chakra-ui/react';
+import { Flex, Box, Input, Avatar } from '@chakra-ui/react';
 
 const Nav = () => {
   return (

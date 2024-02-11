@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  Heading,
   Input,
   Flex,
   Button,
+  Box
 } from "@chakra-ui/react";
-import Comment from "./Comment";
 import Forum_Card from "./Forum_Card";
+import { useNavigate } from 'react-router-dom'
 
 const Forum_page = () => {
   const [text, setText] = useState("");
   const [mode, setMode] = useState([]);
+  const navigate = useNavigate();
+
   const handleInputChange = (e) => {
     setText(e.target.value);
     console.log(text)
@@ -24,6 +23,31 @@ const Forum_page = () => {
 
   return (
     <div className="container" style={{ padding: "20px" }}>
+      <Box align='center'>
+      <a
+                href="https://forum.sublimetext.com"
+                style={{
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                  color: "#00000",
+                  fontSize: "22px",
+                }}
+              >
+                Community Forum
+              </a>
+              </Box>
+      <Box>
+      <Button
+          bgColor="black"
+          height="50px"
+          color="white"
+          _hover={{ bgColor: "gray.700" }} // Change color on hover
+          onClick={() => navigate('/chat')}
+          float={'right'}
+        >
+          Chat with friend
+        </Button>
+        </Box>
       <table style={{ backgroundColor: "#ffffff", width: "100%" }}>
         <tbody>
           <tr>
@@ -35,22 +59,12 @@ const Forum_page = () => {
                 fontFamily: "Helvetica, Arial, sans-serif",
               }}
             >
-              <a
-                href="https://forum.sublimetext.com"
-                style={{
-                  textDecoration: "none",
-                  fontWeight: "bold",
-                  color: "#00000",
-                  fontSize: "22px",
-                  textDecoration: "none",
-                }}
-              >
-                Community Forum
-              </a>
+              
             </td>
           </tr>
         </tbody>
       </table>
+
 
       <Flex
         direction={["column", "column", "row"]}

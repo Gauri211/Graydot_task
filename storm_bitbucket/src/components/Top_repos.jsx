@@ -31,7 +31,6 @@ const TopRepos = () => {
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Top ML Repositories</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {repos.map((repo) => (
           <div
@@ -41,7 +40,7 @@ const TopRepos = () => {
               borderRadius: '8px',
               margin: '10px',
               padding: '15px',
-              width: '300px',
+              width: '280px',
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
               boxSizing: 'border-box',
               position: 'relative', // To position the icon

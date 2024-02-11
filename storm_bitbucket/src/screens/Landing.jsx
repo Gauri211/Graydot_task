@@ -8,7 +8,7 @@ import Footer from "../components/Sections/Footer";
 import Top_repos from "../components/Top_repos";
 import Topdlrepos from "../components/Topdlrepos";
 import Top_genrepos from "../components/Top_genrepos";
-
+import {Heading} from '@chakra-ui/react'
 
 
 export default function Landing() {
@@ -17,9 +17,11 @@ export default function Landing() {
       <TopNavbar />
       <Header />
       <Services />
+      <Heading style={{ textAlign: 'center', marginBottom: '20px' }}>Top ML Repositories</Heading>
       <Top_repos />
+      <Heading style={{ textAlign: 'center', marginBottom: '20px' }}>Top DL Repositories</Heading>
       <Topdlrepos />
-      <Top_genrepos />
+      {/* <Top_genrepos /> */}
       <Blog />
 
       {/* <Contact /> */}
