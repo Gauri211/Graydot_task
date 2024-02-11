@@ -43,7 +43,7 @@ const Verify = () => {
   
   return (
     <Box align="center" mt={['10px', '30px', '50px']}>
-      <marquee width="100%" direction="left" height="100px">
+      <marquee width="60%" direction="left" height="100px">
         <Text fontWeight="semibold" fontSize={['16px', '18px', '20px']}>
           👋🏽 Make sure to enter your correct email address you have to verify it
         </Text>

@@ -75,11 +75,9 @@ export default function Forum_Card(props) {
                         textDecoration: "none",
                         fontWeight: "bold",
                         color: "#006699",
-                        fontWeight: "400",
                         lineHeight: "1.3",
                         margin: "0",
                         padding: "0",
-                        textDecoration: "none",
                       }}
                     >
                       {/* <strong>Discovering commands and their parameters</strong> */}

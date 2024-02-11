@@ -71,9 +71,9 @@ export default function Services() {
                   <div style={{ width: "190px" }}>
                     <FullButton title="Get Started" action={() => nav('/login')} />
                   </div>
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
+                  {/* <div style={{ width: "190px", marginLeft: "15px" }}>
                     <FullButton title="Contact Us" action={() => alert("clicked")} border />
-                  </div>
+                  </div> */}
                 </ButtonsRow>
               </AddLeft>
               <AddRight>
