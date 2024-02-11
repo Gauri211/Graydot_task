@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import './chat.css'
 
 const projectID = '233d91d4-f122-4545-89ae-ac5c84993ae2';
 
