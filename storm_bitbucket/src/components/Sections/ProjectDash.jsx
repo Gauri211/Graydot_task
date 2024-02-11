@@ -1,13 +1,12 @@
-import { useState } from 'react';
-import { Flex, Box, VStack, Heading } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Flex, Box, VStack, Heading, Text, Divider, IconButton, useDisclosure, Input, Avatar, Button } from '@chakra-ui/react';
 import IssueCards from '../Elements/IssueCards';
 import axios from 'axios';
 import SideBar from '../Elements/SideBar';
 import Nav from '../Elements/Nav';
-import Ai from '../Elements/Ai';
+import ProjectRec from '../Elements/ProjectRec';
 
-
-const AiDash = () => {
+const ProjectDash = () => {
 //   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const [response, setResponse] = useState([])
@@ -57,8 +56,8 @@ const AiDash = () => {
         <VStack spacing="4" mt="60px">
         <Heading size="lg">Welcome {response.username}</Heading>
           {/* Add your dashboard content here */}
-          <Box bg="gray.100" w="100%" p='2%' height='80vh'>
-            <Ai />
+          <Box bg="gray.100" w="100%" p='2%' height={'80vh'}>
+            <ProjectRec />
           </Box>
         </VStack>
       </Box>
@@ -66,4 +65,4 @@ const AiDash = () => {
   );
 };
 
-export default AiDash;
+export default ProjectDash;

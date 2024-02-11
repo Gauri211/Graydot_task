@@ -22,6 +22,8 @@ import AiDash from "./components/Sections/AiDash.jsx";
 import RepoDash from "./components/Sections/RepoDash.jsx";
 import Chat from "./chat/Chat.jsx"
 import Profile_Form from "./components/Sections/Profile_Form.jsx";
+import ProjectRec from "./components/Elements/ProjectRec.jsx";
+import ProjectDash from "./components/Sections/ProjectDash.jsx";
 
 export default function App() {
   return (
@@ -52,7 +54,8 @@ export default function App() {
           <Route path='/forum' element={<><ForumDash /></>} />
           <Route path='/leader' element={<><LeaderDash /></>} />
           <Route path='/ai' element={<><AiDash /></>} />
-          <Route path='/repo' element={<><RepoDash /></>} />
+          <Route path='/domain' element={<><RepoDash /></>} />
+          <Route path='/repo' element={<><ProjectDash /></>} />
           <Route path='/userProfile' element={<><Profile_Form /></>} />
           <Route path='/chat' element={<><Chat /></>} />
 

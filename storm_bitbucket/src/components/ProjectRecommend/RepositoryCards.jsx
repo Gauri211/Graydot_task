@@ -23,7 +23,7 @@ const RepositoryCards = ({ repo }) => {
       alignItems: 'center',
       color: 'black',
     }}>
-      <h3 style={{ color: '#000', marginBottom: '10px' }}>{repo.repository_title}</h3>
+      <h3 style={{ color: '#000', marginBottom: '10px', fontSize: '20px', fontWeight: 500 }}>{repo.repository_title}</h3>
       <p style={{ marginBottom: '10px' }}>Stars: {repo.stargazers_count}</p>
       <div style={{ marginBottom: '10px' }}>
         {repo.topics.slice(0, 2).join(', ')}

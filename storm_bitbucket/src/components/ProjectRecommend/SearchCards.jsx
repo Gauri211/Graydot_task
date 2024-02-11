@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import RepositoryCards from './RepositoryCards';
 import TopRepos from '../Top_repos';
 import Topdlrepos from '../Topdlrepos';
-import {Box} from '@chakra-ui/react'
+import {Box, Heading} from '@chakra-ui/react'
 import Top_genrepos from '../Top_genrepos';
 
 const SearchCards = () => {
@@ -26,6 +26,8 @@ const SearchCards = () => {
   };
 
   return (
+    <>
+    <center><h2 style={{ margin: '0 0 20px 0', fontSize: '24px', align: 'center' }}>Explore your favourite domain to work on!!</h2></center>
     <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', color: 'black' }}>
       <div style={{ marginBottom: '20px' }}>
         <input
@@ -68,6 +70,7 @@ const SearchCards = () => {
       <Topdlrepos />
       </Box>
     </div>
+    </>
   );
 };
 

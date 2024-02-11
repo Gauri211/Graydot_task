@@ -43,11 +43,12 @@ const Verify = () => {
   
   return (
     <Box align="center" mt={['10px', '30px', '50px']}>
-      <marquee width="60%" direction="left" height="100px">
+      <marquee width="50%" direction="left" height="100px">
         <Text fontWeight="semibold" fontSize={['16px', '18px', '20px']}>
-          👋🏽 Make sure to enter your correct email address you have to verify it
+          👋🏽 Make sure to enter your correct username to verify it
         </Text>
       </marquee>
+      {/* <Text mb='-10%'>Enter Username: </Text> */}
       <Flex direction={['column', 'column', 'row']} alignItems="center" justifyContent="center" mt={['20px', '50px', '100px']}>
         <Input
           placeholder="Enter your Username"
