@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 // Screens
-// import Landing from "./screens/Landing.jsx";
+import Landing from "./screens/Landing.jsx";
 // import Login from "./screens/Login.jsx";
 // import Home from "./screens/Home/Home.jsx";
 // import SurveyForm from "./screens/employeeForms/SurveyForm";
@@ -18,8 +18,8 @@ import Dashboard from "./components/Sections/Dashboard.jsx";
 import Profile from "./components/Profile.jsx";
 import Forum_page from "./screens/forums/Forum_page.jsx";
 import ProfileSection from "./components/Sections/ProfileSection.jsx";
-// import Forumpage from "./screens/forums/Forumpage.jsx";
 import LeaderDash from "./components/Sections/LeaderDash.jsx";
+import ForumDash from "./components/Sections/ForumDash.jsx";
 
 export default function App() {
   return (
@@ -37,17 +37,17 @@ export default function App() {
         <Routes>
           <Route path='/verify' element={<><Verify /></>} />
         </Routes>
-        {/* <Routes>
+        <Routes>
           <Route path='/' element={<><Landing /></>} />
-          <Route path='/survey-form' element={<SurveyCreationTool/>} />
-        </Routes> */}
+          {/* <Route path='/survey-form' element={<SurveyCreationTool/>} /> */}
+        </Routes>
         <Routes>
           {/* <Route path='/home' element={<><Home /></>} /> */}
           <Route path='/issues/:email' element={<><Dashboard /></>} />
           {/* <Route path='/blogs' element={<><Blogs /></>} />
           <Route path='/events' element={<><Events /></>} /> */}
           <Route path='/profile' element={<><ProfileSection /></>} />
-          {/* <Route path='/forum' element={<><Forumpage /></>} /> */}
+          <Route path='/forum' element={<><ForumDash /></>} />
           <Route path='/leader' element={<><LeaderDash /></>} />
 
         </Routes>

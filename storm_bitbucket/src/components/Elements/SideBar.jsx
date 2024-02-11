@@ -8,10 +8,11 @@ const SideBar = (name) => {
     <VStack p="4" spacing="4">
           <Heading size="md">HackNcheese</Heading>
           <Divider/>
-          <Button onClick={() => navigate(`/issues/user`)}>Issues</Button>
-          <Button onClick={() => navigate(`/saved`)}>Saved</Button>
-          <Button onClick={() => navigate('/profile')}>Profile</Button>
-          <Button onClick={() => navigate('/leader')}>Leaderboard</Button>
+          <Button bg="gray.200" onClick={() => navigate(`/issues/user`)}>Issues</Button>
+          <Button bg="gray.200" onClick={() => navigate(`/saved`)}>Saved</Button>
+          <Button bg="gray.200" onClick={() => navigate(`/forum`)}>Community</Button>
+          <Button bg="gray.200" onClick={() => navigate('/leader')}>Leaderboard</Button>
+          <Button bg="gray.200" onClick={() => navigate('/profile')}>Profile</Button>
 
           {/* Add more sidebar links as needed */}
     </VStack>
